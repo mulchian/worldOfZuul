@@ -19,7 +19,7 @@ import java.util.HashMap;
 
 public class Room {
 	private String description;
-	private String longDescription = "";
+	private String longDescription;
 	private HashMap<Direction, Room> exits = new HashMap<Direction, Room>();
 
 	/**
@@ -62,6 +62,7 @@ public class Room {
 	}
 
 	public String getLongDescription() {
+		longDescription = "";
 		longDescription += "You are " + this.getDescription() + "\n";
 		longDescription += "Exits: ";
 		longDescription += this.getExitsAsString() + "\n";
